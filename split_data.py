@@ -10,6 +10,9 @@ msk = np.random.rand(len(df)) <= 0.8
 train = df[msk]
 test = df[~msk]
 
+del train['split']
+del test['split']
+
 print(train.head())
 print("--------------------------------")
 print(f"Original file size {df.shape}")
